@@ -9,7 +9,6 @@ import com.example.demo.model.Customer;
 
 import java.util.List;
 
- 
 @RestController
 @RequestMapping("/api")
 public class CustomerController {

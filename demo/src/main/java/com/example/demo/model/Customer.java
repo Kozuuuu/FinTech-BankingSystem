@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import jakarta.persistence.Column;
 import java.sql.Date;
 import jakarta.persistence.Id;
+
 @Entity
 @Table(name = "customers")
 @Data

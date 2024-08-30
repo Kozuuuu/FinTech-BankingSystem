@@ -15,9 +15,11 @@ import jakarta.persistence.Id;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
 public class Transaction {
 
     @Id
+    
     @Column(name = "transaction_id")
     private String transactionId;
 
