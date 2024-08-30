@@ -4,21 +4,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.example.demo.service.ClientService;
-import com.example.demo.model.Client;
+import com.example.demo.service.CustomerService;
+import com.example.demo.model.Customer;
 
 import java.util.List;
 
  
 @RestController
 @RequestMapping("/api")
-public class ClientController {
+public class CustomerController {
 
     @Autowired
-    private ClientService service;
+    private CustomerService service;
 
-    @GetMapping("/client")
-    public List<Client> getAllClients() {
-        return service.getAllClients();
+    @GetMapping("/customer")
+    public List<Customer> getAllCustomers() {
+        return service.getAllCustomers();
     }
 }
