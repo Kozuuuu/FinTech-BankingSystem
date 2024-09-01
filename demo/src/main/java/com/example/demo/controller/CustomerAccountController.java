@@ -10,14 +10,14 @@ import com.example.demo.model.CustomerAccount;
 import java.util.List;
 
 @RestController
-@RequestMapping("/accounts")  // This URL is used for accessing customer accounts
+@RequestMapping
 public class CustomerAccountController {
 
     @Autowired
-    private CustomerAccountService customerAccountService;
+    private CustomerAccountService service;
 
-    @GetMapping
+    @GetMapping("/accounts")
         public List<CustomerAccount> getAllCustomerAccounts() {
-        return customerAccountService.getAllCustomerAccounts();
+        return service.getAllCustomerAccounts();
     }
 }

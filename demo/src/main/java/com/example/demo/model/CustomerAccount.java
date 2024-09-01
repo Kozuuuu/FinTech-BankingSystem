@@ -11,7 +11,7 @@ import java.sql.Date;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "custommer_account")
+@Table(name = "customer_account")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
