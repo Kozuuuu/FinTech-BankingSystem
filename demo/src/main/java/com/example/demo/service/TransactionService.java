@@ -1,12 +1,13 @@
 package com.example.demo.service;
 
+import java.util.List;
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.example.demo.model.Transaction;
 import com.example.demo.repo.TransactionRepo;
-
-import java.util.UUID;
-import java.util.List;
 
 @Service
 public class TransactionService {
@@ -28,10 +29,6 @@ public class TransactionService {
         return repository.save(transaction);
     }
 
-    public void deleteTransaction(String id) {
-        repository.deleteById(id);
-    }
-
     public Transaction updateTransaction(String id, Transaction updatedTransaction) {
         Transaction existingTransaction = repository.findById(id).orElse(null);
         if (existingTransaction != null) {
@@ -40,5 +37,9 @@ public class TransactionService {
             return repository.save(existingTransaction);
         }
         return null;
+    }
+    
+    public void deleteTransaction(String id) {
+        repository.deleteById(id);
     }
 }
