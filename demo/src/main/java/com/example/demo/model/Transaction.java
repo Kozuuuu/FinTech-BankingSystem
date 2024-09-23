@@ -1,14 +1,15 @@
 package com.example.demo.model;
 
+import java.math.BigDecimal;
+import java.sql.Date;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import jakarta.persistence.Column;
-import java.sql.Date;
-import java.math.BigDecimal;
-import jakarta.persistence.Id;
 
 @Entity
 @Table(name = "transactions")
